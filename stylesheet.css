@@ -1,0 +1,178 @@
+body{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #9EA1A4;
+    font-family: Staatliches;
+  }
+
+  .header{
+    background-color: #181C1F;
+    color: pink;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-height: 10%;
+  } 
+
+  #headerimg {
+    min-width: 100px;
+    max-width: 350px;
+    position:relative;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: auto; 
+    margin-left: auto;
+  }
+
+  .container {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1px;
+  }
+  
+  p {
+    text-align: center;
+    align-items: flex-start;
+    font-size: 22px;
+  }
+
+  .speed, .fuel, .stock, .passenger {
+    flex: none;
+    width: 50%;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1);
+    color: #4a4a4a;
+    padding: 20px;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .passenger {
+   margin-bottom: 2%;
+  }
+
+  #chart_speed, #chart_fuel, #chart_stock, #chart_passenger {
+    justify-content: center;
+    display: flex;
+  }
+
+ #fuel_chart {
+  width: 50%;
+}
+  
+  #chart_passenger {
+    height: 150%;
+    width: 150%;
+  }
+
+   #passengerText {
+    margin-bottom: -7%;
+  } 
+  
+  @media screen and (min-width: 760px) and (max-width: 1024px) { /*vanaf tablet */
+    
+    .container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    
+    .speed, .fuel, .stock, .passenger {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 100%;
+      flex: 1;
+      margin-left: 5%;
+      margin-right: 5%; 
+      width: 25%
+    }
+
+    #chart_fuel {
+      max-width: 120%;
+    }
+
+    #chart_stock, #chart_passenger {
+      width: 100%;
+    }     
+  }
+  
+  @media screen and (min-width: 1024px) and (max-width: 1440px) { /*vanaf desktop */
+    
+    body{
+      max-height: 100%;
+      max-width: 100%;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      max-width: 100%;
+    }
+    
+    .speed, .fuel, .stock, .passenger {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 100%;
+      flex: 1;
+      margin-left: 2%;
+      margin-right: 2%; 
+      max-width: 100%
+    }
+
+    .passenger {
+      width: 550px;
+    }
+
+    #chart_stock, #chart_passenger, #chart_fuel, #chart_speed {
+      width: 100%;
+    }
+  }
+  
+  @media screen and (min-width: 1440px) { /*vanaf hd*/
+  
+    body{
+      max-height: 100%;
+      max-width: 100%;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      max-width: 100%;
+    }
+    
+    .speed, .fuel, .stock, .passenger {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 100%;
+      flex: 1;
+      margin-left: 3%;
+      margin-right: 3%; 
+      max-width: 100%
+    }
+
+    #chart_stock, #chart_passenger, #chart_fuel, #chart_speed {
+      width: 100%;
+    }
+
+ p {
+   font-size: 40px;
+   margin: -3%;
+ }
+
+  }
